@@ -205,7 +205,7 @@ class Modmail(commands.Bot):
                     if 'User ID:' in str(chan.topic):
                         user_id = int(chan.topic.split(': ')[1])
                         user = self.get_user(user_id)
-                        await user.send(f'**{ctx.author}** has closed this modmail session.')
+                        await user.send(f'**{ctx.author}** has closed this mdomail session , feel free to contact us in case you need any further help.')
                     await chan.delete()
         await categ.delete()
         await ctx.send('Disabled modmail.')
