@@ -172,6 +172,11 @@ class Modmail(commands.Bot):
         em.set_footer(text='Star the repository to unlock hidden features!')
 
         return em
+    
+    @client.event
+    async def on_message(message):
+        if message.content.upper.startswith("!bot"):
+            await client.send_message(message.channel, "this bot is being developed by @maaz#2031")
 
     @commands.command()
     @commands.has_permissions(administrator=True)
