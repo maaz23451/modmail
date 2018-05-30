@@ -173,11 +173,7 @@ class Modmail(commands.Bot):
 
         return em
     
-    @client.event
-    async def on_message(message):
-        if message.content.upper.startswith("!bot"):
-            await client.send_message(message.channel, "this bot is being developed by @maaz#2031")
-
+    
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def setup(self, ctx, *, modrole: discord.Role=None):
